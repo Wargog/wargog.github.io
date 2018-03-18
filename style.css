@@ -1,0 +1,121 @@
+/* * {
+	outline: 1px solid red !important;
+} */
+
+body {
+	height: 100vh;
+	background-color: #9bccae;
+	background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='4' height='4' viewBox='0 0 4 4'%3E%3Cpath fill='%237c7489' fill-opacity='0.15' d='M1 3h1v1H1V3zm2-2h1v1H3V1z'%3E%3C/path%3E%3C/svg%3E");
+	overflow: hidden;
+}
+
+a:click {
+text-decoration: none;
+}
+
+.profile-picture {
+	width: 15vw;
+	height: 15vw;
+	border-radius: 50%;
+	display: block;
+	margin-left: auto;
+	margin-right: auto;
+	margin-top: 15vh;
+}
+
+.name {
+	text-align: center;
+	margin-top: 10px;
+	color: whitesmoke;
+	font-family: 'Source Sans Pro', sans-serif;
+	font-size: 80px;
+	font-weight: bolder;
+	padding-bottom: 0;
+	margin-bottom: 0;
+}
+
+.link-animate-underline {
+	position: relative;
+	color: white;
+	text-decoration: none;
+}
+
+.link-animate-underline:hover {
+	color: white;
+}
+
+.link-animate-underline:before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 5px;
+	border-radius: 20%;
+	bottom: -6px;
+	left: 0;
+	background-color: white;
+	visibility: hidden;
+	-webkit-transform: scaleX(0);
+	transform: scaleX(0);
+	-webkit-transition: all 0.5s ease-in-out 0s;
+	transition: all 0.5s ease-in-out 0s;
+}
+
+.link-animate-underline:hover:before {
+	visibility: visible;
+	-webkit-transform: scaleX(1);
+	transform: scaleX(1);
+}
+
+.highlight {
+	font-size: 35px;
+	color: white;
+	text-align: center;
+	font-family: 'Work Sans', sans-serif;
+}
+
+.circle-scroll {
+	width: 5vw;
+	height: 5vw;
+	margin: 0;
+	padding: 0;
+	background: white;
+	-moz-border-radius: 2.5vw;
+	-webkit-border-radius: 2.5vw;
+	border-radius: 2.5vw;
+	border: none;
+	box-shadow: 0 0 15px rgba(0,0,0,0.9);
+}
+
+.circle-scroll:hover {
+	animation: scroll-button-shadow 0.5s forwards;
+	cursor: pointer;
+}
+
+.scroll-arrow {
+	font-size: 400%;
+	text-decoration: none;
+	color: black;
+}
+
+.container-hover-right {
+	position: absolute;
+	top: 47vh;
+	left: 91vw;
+	transform: translateX(-50%), translateY(-50%);
+}
+
+.container-hover-left {
+	position: absolute;
+	top: 50%;
+	left: 50%;
+	transform: translateX(-50%), translateY(-50%);
+}
+
+@keyframes scroll-button-shadow {
+	from {
+		box-shadow: 0 0 15px rgba(0,0,0,0.9);
+	}
+	to {
+		box-shadow: 0 0 4px rgba(0,0,0,0.2);
+	}
+}
